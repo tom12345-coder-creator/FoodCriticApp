@@ -21,12 +21,12 @@ public class Database extends DataBaseHelper{
     public Cursor getReviewList(){
         SQLiteDatabase db = this.getReadableDatabase();
         String table = "review";
-        String[] columns = {"userReview"};
+        String[] columns = {"foodItem","userReview"};
         String selection = "";
         String[] selectionArgs = {};
         String groupBy = null;
         String having = null;
-        String orderBy = "userReview Desc";
+        String orderBy = "foodItem Desc";
         String list = "100";
 
         Cursor cursor = db.query(table, columns, selection, selectionArgs, groupBy, having, orderBy, list);

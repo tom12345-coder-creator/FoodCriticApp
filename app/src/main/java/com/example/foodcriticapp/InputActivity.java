@@ -36,7 +36,7 @@ public class InputActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String userReviewValue = userReview.getText().toString();
                 ContentValues values = new ContentValues();
-                values.put("username", userReviewValue);
+                values.put("userReview", userReviewValue);
 
                 Database db = new Database(getApplicationContext());
                 db.addReview(values);
