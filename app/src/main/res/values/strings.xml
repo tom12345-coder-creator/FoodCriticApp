@@ -13,4 +13,8 @@
     <string name="ReviewLable">add review</string>
     <string name="backLable">Back</string>
     <string name="listReviewLable">List Reviews</string>
+    <string name="foodItemLable">"Food Name "</string>
+    <string name="foodNameInput">"food name "</string>
+    <string name="FoodInput">Input food name</string>
+    <string name="foodInp" />
 </resources>
