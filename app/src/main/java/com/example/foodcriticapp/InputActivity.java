@@ -13,6 +13,7 @@ public class InputActivity extends AppCompatActivity {
     EditText userReview;
     EditText foodItem;
     EditText foodPrice;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,7 +29,7 @@ public class InputActivity extends AppCompatActivity {
         backBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(InputActivity.this,MainActivity.class);
+                Intent intent = new Intent(InputActivity.this, MainActivity.class);
                 startActivity(intent);
             }
         });
@@ -47,7 +48,7 @@ public class InputActivity extends AppCompatActivity {
 
                 Database db = new Database(getApplicationContext());
                 db.addReview(values);
-                startActivity(new Intent(InputActivity.this,ListInputActivity.class));
+                startActivity(new Intent(InputActivity.this, ListInputActivity.class));
 
             }
         });

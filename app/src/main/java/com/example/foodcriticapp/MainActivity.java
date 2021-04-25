@@ -15,13 +15,12 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-
         Button btn = findViewById(R.id.addReviewbtn);
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this,InputActivity.class);
+                Intent intent = new Intent(MainActivity.this, InputActivity.class);
                 startActivity(intent);
             }
         });
@@ -31,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
         ListReviewBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this,ListInputActivity.class);
+                Intent intent = new Intent(MainActivity.this, ListInputActivity.class);
                 startActivity(intent);
             }
         });

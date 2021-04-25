@@ -7,21 +7,21 @@ import android.database.sqlite.SQLiteDatabase;
 
 import androidx.annotation.Nullable;
 
-public class Database extends DataBaseHelper{
+public class Database extends DataBaseHelper {
     public Database(@Nullable Context context) {
         super(context);
     }
 
     public long addReview(ContentValues values) {
         SQLiteDatabase db = getReadableDatabase();
-        return db.insert("review", null,values);
+        return db.insert("review", null, values);
 
     }
 
-    public Cursor getReviewList(){
+    public Cursor getReviewList() {
         SQLiteDatabase db = this.getReadableDatabase();
         String table = "review";
-        String[] columns = {"foodItem","userReview"};
+        String[] columns = {"foodItem", "userReview"};
         String selection = "";
         String[] selectionArgs = {};
         String groupBy = null;

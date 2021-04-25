@@ -24,7 +24,7 @@ public class ListInputActivity extends AppCompatActivity {
         reviewList.moveToFirst();
 
 
-        do{
+        do {
             String name = reviewList.getString(0);
             TextView textBox = new TextView(this);
             textBox.setText(name);
@@ -38,7 +38,7 @@ public class ListInputActivity extends AppCompatActivity {
         backBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(ListInputActivity.this,MainActivity.class);
+                Intent intent = new Intent(ListInputActivity.this, MainActivity.class);
                 startActivity(intent);
             }
         });
