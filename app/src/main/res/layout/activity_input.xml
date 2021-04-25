@@ -41,7 +41,6 @@
         android:ems="10"
         android:gravity="start|top"
         android:importantForAutofill="no"
-        android:inputType="@string/inputReviewLable"
         app:layout_constraintEnd_toEndOf="@+id/foodPriceInput"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/foodPriceInput"
@@ -85,7 +84,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="64dp"
         android:ems="10"
-        android:inputType="@string/PriceLable"
         app:layout_constraintEnd_toEndOf="@+id/foodItemInput"
         app:layout_constraintStart_toStartOf="@+id/foodItemInput"
         app:layout_constraintTop_toBottomOf="@+id/foodItemInput" />
