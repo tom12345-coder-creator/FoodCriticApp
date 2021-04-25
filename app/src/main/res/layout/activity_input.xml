@@ -19,7 +19,8 @@
         android:id="@+id/savebtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="104dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
         android:text="@string/saveLable"
         app:layout_constraintEnd_toEndOf="@+id/userReviewInput"
         app:layout_constraintTop_toBottomOf="@+id/userReviewInput" />
@@ -28,7 +29,8 @@
         android:id="@+id/backBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="104dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
         android:text="@string/backLable"
         app:layout_constraintStart_toStartOf="@+id/userReviewInput"
         app:layout_constraintTop_toBottomOf="@+id/userReviewInput" />
