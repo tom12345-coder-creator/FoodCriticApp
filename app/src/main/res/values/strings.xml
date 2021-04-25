@@ -18,4 +18,8 @@
     <string name="FoodInput">Input food name</string>
     <string name="foodInp" />
     <string name="FoodCriticApp">"Food Reviews "</string>
+    <string name="inputReviewLable" />
+    <string name="FoodPriceLable">"Food Price "</string>
+    <string name="foodPriceInput" />
+    <string name="PriceLable" />
 </resources>

@@ -12,6 +12,7 @@ import android.widget.EditText;
 public class InputActivity extends AppCompatActivity {
     EditText userReview;
     EditText foodItem;
+    EditText foodPrice;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,6 +20,7 @@ public class InputActivity extends AppCompatActivity {
 
         foodItem = findViewById(R.id.foodItemInput);
         userReview = findViewById(R.id.userReviewInput);
+        foodPrice = findViewById(R.id.foodPriceInput);
 
         Button btn = findViewById(R.id.savebtn);
         Button backBtn = findViewById(R.id.backBtn);
@@ -37,9 +39,11 @@ public class InputActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String foodItemInput = foodItem.getText().toString();
                 String userReviewValue = userReview.getText().toString();
+                String foodProceInput = foodPrice.getText().toString();
                 ContentValues values = new ContentValues();
-                values.put("userReview", userReviewValue);
                 values.put("foodItem", foodItemInput);
+                values.put("userReview", userReviewValue);
+                values.put("foodPrice", foodProceInput);
 
                 Database db = new Database(getApplicationContext());
                 db.addReview(values);
