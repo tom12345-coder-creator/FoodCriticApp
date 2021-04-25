@@ -11,12 +11,13 @@ import android.widget.EditText;
 
 public class InputActivity extends AppCompatActivity {
     EditText userReview;
+    EditText foodItem;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_input);
 
-
+        foodItem = findViewById(R.id.foodItemInput);
         userReview = findViewById(R.id.userReviewInput);
 
         Button btn = findViewById(R.id.savebtn);
@@ -34,9 +35,11 @@ public class InputActivity extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                String foodItemInput = foodItem.getText().toString();
                 String userReviewValue = userReview.getText().toString();
                 ContentValues values = new ContentValues();
                 values.put("userReview", userReviewValue);
+                values.put("foodItem", foodItemInput);
 
                 Database db = new Database(getApplicationContext());
                 db.addReview(values);

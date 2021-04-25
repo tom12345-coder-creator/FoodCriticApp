@@ -46,7 +46,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+        app:layout_constraintTop_toBottomOf="@+id/foodItemInput" />
 
     <TextView
         android:id="@+id/textView3"
@@ -54,11 +54,11 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:text="@string/foodItemLable"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName" />
+        app:layout_constraintBottom_toTopOf="@+id/foodItemInput"
+        app:layout_constraintStart_toStartOf="@+id/foodItemInput" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/foodItemInput"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
