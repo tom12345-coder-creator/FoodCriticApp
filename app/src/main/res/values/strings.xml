@@ -17,4 +17,5 @@
     <string name="foodNameInput">"food name "</string>
     <string name="FoodInput">Input food name</string>
     <string name="foodInp" />
+    <string name="FoodCriticApp">"Food Reviews "</string>
 </resources>
