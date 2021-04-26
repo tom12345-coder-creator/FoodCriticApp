@@ -31,14 +31,14 @@ public class ListInputActivity extends AppCompatActivity {
             container.addView(textBox);
 
             String price = reviewList.getString(1);
-            TextView textBox2 = new TextView(this);
-            textBox.setText(price);
-            container.addView(textBox2);
+            TextView textBox1 = new TextView(this);
+            textBox1.setText(price);
+            container.addView(textBox1);
 
             String review = reviewList.getString(2);
-            TextView textBox1 = new TextView(this);
-            textBox.setText(review);
-            container.addView(textBox1);
+            TextView textBox2 = new TextView(this);
+            textBox2.setText(review);
+            container.addView(textBox2);
 
         } while (reviewList.moveToNext());
 
