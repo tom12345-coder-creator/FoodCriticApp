@@ -34,4 +34,20 @@ public class Database extends DataBaseHelper {
         return cursor;
 
     }
+    public int deleteReview(String foodItem) {
+        SQLiteDatabase db = getWritableDatabase();
+        String column = "foodItem=?";
+        String[] FoodItem = {foodItem};
+
+        return db.delete("review",column, FoodItem);
+    }
+
+    public int saveReview(String search, String newValue) {
+        SQLiteDatabase db = getWritableDatabase();
+        ContentValues values = new ContentValues();
+        values.put("reviewInput",newValue);
+        String[] searches = {search};
+
+        return db.update("reviewInput",values,"reviewInput=?",searches);
+    }
 }

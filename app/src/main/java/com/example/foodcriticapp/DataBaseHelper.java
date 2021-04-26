@@ -21,6 +21,7 @@ public class DataBaseHelper extends SQLiteOpenHelper {
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         String dropTable = "drop table if exists review";
         db.execSQL(dropTable);
+        onCreate(db);
 
     }
 }

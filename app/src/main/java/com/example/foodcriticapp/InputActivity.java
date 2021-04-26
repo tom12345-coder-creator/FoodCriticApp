@@ -38,16 +38,17 @@ public class InputActivity extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String foodItemInput = foodItem.getText().toString();
+                String foodItemValues = foodItem.getText().toString();
                 String userReviewValue = userReview.getText().toString();
-                String foodProceInput = foodPrice.getText().toString();
+                String foodPriceValues = foodPrice.getText().toString();
                 ContentValues values = new ContentValues();
-                values.put("foodItem", foodItemInput);
-                values.put("userReview", userReviewValue);
-                values.put("foodPrice", foodProceInput);
+                values.put("reviewInput", foodItemValues);
+                values.put("reviewInput", userReviewValue);
+                values.put("reviewInput", foodPriceValues);
 
                 Database db = new Database(getApplicationContext());
-                db.addReview(values);
+                long success = db.addReview(values);
+                if(success==-1)
                 startActivity(new Intent(InputActivity.this, ListInputActivity.class));
 
             }
