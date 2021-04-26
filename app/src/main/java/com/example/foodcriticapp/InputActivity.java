@@ -23,11 +23,11 @@ public class InputActivity extends AppCompatActivity {
         userReview = findViewById(R.id.userReviewInput);
         foodPrice = findViewById(R.id.foodPriceInput);
 
-        Button savebtn = findViewById(R.id.savebtn);
+        Button saveBtn = findViewById(R.id.savebtn);
         Button backBtn = findViewById(R.id.backBtn);
 
 
-        savebtn.setOnClickListener(new View.OnClickListener() {
+        saveBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String foodItemValues = foodItem.getText().toString();
@@ -40,7 +40,7 @@ public class InputActivity extends AppCompatActivity {
 
                 Database db = new Database(getApplicationContext());
                 long success = db.addReview(values);
-                if (success == -1)
+                if (success != -1)
                     startActivity(new Intent(InputActivity.this, ListInputActivity.class));
 
             }

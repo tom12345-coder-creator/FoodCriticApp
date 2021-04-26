@@ -8,17 +8,17 @@ import androidx.annotation.Nullable;
 
 public class DataBaseHelper extends SQLiteOpenHelper {
     public DataBaseHelper(@Nullable Context context) {
-        super(context, "reviewDb.db", null, 1);
+        super(context, "reviewDb.db", null, 2);
     }
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String CreateTable = "create table if not exists review (" +
+        String createTable = "create table if not exists review (" +
                 "foodName text,"+
-                "foodPrice text," +
+                "foodPrice int," +
                 "reviewInput text" +
                 ")";
-        db.execSQL(CreateTable);
+        db.execSQL(createTable);
     }
 
     @Override

@@ -13,7 +13,7 @@ public class Database extends DataBaseHelper {
     }
 
     public long addReview(ContentValues values) {
-        SQLiteDatabase db = getReadableDatabase();
+        SQLiteDatabase db = getWritableDatabase();
         return db.insert("review", null, values);
 
     }
@@ -36,7 +36,7 @@ public class Database extends DataBaseHelper {
     }
     public int deleteReview(String foodItem) {
         SQLiteDatabase db = getWritableDatabase();
-        String column = "foodname=?";
+        String column = "foodName=?";
         String[] foodName = {foodItem};
 
         return db.delete("review",column, foodName);

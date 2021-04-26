@@ -8,9 +8,10 @@
 
     <TextView
         android:id="@+id/foodReviewText"
-        android:layout_width="108dp"
+        android:layout_width="wrap_content"
         android:layout_height="29dp"
         android:autoSizeMinTextSize="50dp"
+        android:autoSizePresetSizes="50dp"
         android:text="@string/FoodCriticApp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
