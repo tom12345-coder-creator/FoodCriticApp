@@ -34,9 +34,9 @@ public class InputActivity extends AppCompatActivity {
                 String userReviewValue = userReview.getText().toString();
                 String foodPriceValues = foodPrice.getText().toString();
                 ContentValues values = new ContentValues();
-                values.put("reviewInput", foodItemValues);
+                values.put("foodName", foodItemValues);
                 values.put("reviewInput", userReviewValue);
-                values.put("reviewInput", foodPriceValues);
+                values.put("foodPrice", foodPriceValues);
 
                 Database db = new Database(getApplicationContext());
                 long success = db.addReview(values);

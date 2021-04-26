@@ -13,7 +13,11 @@ public class DataBaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String CreateTable = "create table if not exists review (reviewInput text)";
+        String CreateTable = "create table if not exists review (" +
+                "foodName text,"+
+                "foodPrice text," +
+                "reviewInput text" +
+                ")";
         db.execSQL(CreateTable);
     }
 

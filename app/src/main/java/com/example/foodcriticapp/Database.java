@@ -21,12 +21,12 @@ public class Database extends DataBaseHelper {
     public Cursor getReviewList() {
         SQLiteDatabase db = this.getReadableDatabase();
         String table = "review";
-        String[] columns = {"reviewInput"};
+        String[] columns = {"foodName","reviewInput","foodPrice"};
         String selection = "";
         String[] selectionArgs = {};
         String groupBy = null;
         String having = null;
-        String orderBy = "reviewInput Desc";
+        String orderBy = "foodName Desc";
         String list = "100";
 
         Cursor cursor = db.query(table, columns, selection, selectionArgs, groupBy, having, orderBy, list);
@@ -36,18 +36,18 @@ public class Database extends DataBaseHelper {
     }
     public int deleteReview(String foodItem) {
         SQLiteDatabase db = getWritableDatabase();
-        String column = "reviewInput=?";
-        String[] reviewInput = {foodItem};
+        String column = "foodname=?";
+        String[] foodName = {foodItem};
 
-        return db.delete("review",column, reviewInput);
+        return db.delete("review",column, foodName);
     }
 
     public int saveReview(String search, String newValue) {
         SQLiteDatabase db = getWritableDatabase();
         ContentValues values = new ContentValues();
-        values.put("reviewInput",newValue);
+        values.put("foodName",newValue);
         String[] searches = {search};
 
-        return db.update("review",values,"reviewInput=?",searches);
+        return db.update("review",values,"foodName=?",searches);
     }
 }
