@@ -24,8 +24,6 @@ public class InputActivity extends AppCompatActivity {
         foodPrice = findViewById(R.id.foodPriceInput);
 
         Button saveBtn = findViewById(R.id.savebtn);
-        Button backBtn = findViewById(R.id.backBtn);
-
 
         saveBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -46,6 +44,7 @@ public class InputActivity extends AppCompatActivity {
             }
         });
 
+        Button backBtn = findViewById(R.id.backBtn);
         backBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -25,12 +25,22 @@ public class ListInputActivity extends AppCompatActivity {
 
 
         do {
-            String review = reviewList.getString(0);
+            String food = reviewList.getString(0);
             TextView textBox = new TextView(this);
-            textBox.setText(review);
+            textBox.setText(food);
             container.addView(textBox);
 
-        } while (reviewList.moveToFirst());
+            String price = reviewList.getString(1);
+            TextView textBox2 = new TextView(this);
+            textBox.setText(price);
+            container.addView(textBox2);
+
+            String review = reviewList.getString(2);
+            TextView textBox1 = new TextView(this);
+            textBox.setText(review);
+            container.addView(textBox1);
+
+        } while (reviewList.moveToNext());
 
 
         Button backBtn = findViewById(R.id.listUserBackBtn);

@@ -21,7 +21,7 @@ public class Database extends DataBaseHelper {
     public Cursor getReviewList() {
         SQLiteDatabase db = this.getReadableDatabase();
         String table = "review";
-        String[] columns = {"foodName","reviewInput","foodPrice"};
+        String[] columns = {"foodName","foodPrice","reviewInput"};
         String selection = "";
         String[] selectionArgs = {};
         String groupBy = null;
