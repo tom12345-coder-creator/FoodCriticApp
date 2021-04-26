@@ -25,9 +25,9 @@ public class ListInputActivity extends AppCompatActivity {
 
 
         do {
-            String name = reviewList.getString(0);
+            String review = reviewList.getString(0);
             TextView textBox = new TextView(this);
-            textBox.setText(name);
+            textBox.setText(review);
             container.addView(textBox);
 
         } while (reviewList.moveToFirst());

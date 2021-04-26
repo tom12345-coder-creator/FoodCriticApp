@@ -23,19 +23,11 @@ public class InputActivity extends AppCompatActivity {
         userReview = findViewById(R.id.userReviewInput);
         foodPrice = findViewById(R.id.foodPriceInput);
 
-        Button btn = findViewById(R.id.savebtn);
+        Button savebtn = findViewById(R.id.savebtn);
         Button backBtn = findViewById(R.id.backBtn);
 
-        backBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(InputActivity.this, MainActivity.class);
-                startActivity(intent);
-            }
-        });
 
-
-        btn.setOnClickListener(new View.OnClickListener() {
+        savebtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String foodItemValues = foodItem.getText().toString();
@@ -48,9 +40,17 @@ public class InputActivity extends AppCompatActivity {
 
                 Database db = new Database(getApplicationContext());
                 long success = db.addReview(values);
-                if(success==-1)
-                startActivity(new Intent(InputActivity.this, ListInputActivity.class));
+                if (success == -1)
+                    startActivity(new Intent(InputActivity.this, ListInputActivity.class));
 
+            }
+        });
+
+        backBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(InputActivity.this, MainActivity.class);
+                startActivity(intent);
             }
         });
     }
